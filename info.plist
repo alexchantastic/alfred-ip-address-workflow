@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alexchantastic.ipaddress</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>57437172-903E-4E52-B95B-71F69C28819F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E8AE1551-D33E-467A-AB97-9F557BEB3420</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Alex Chan</string>
+	<key>description</key>
+	<string>Get your local and external IP addresses.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>IP Address</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>E8AE1551-D33E-467A-AB97-9F557BEB3420</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>ip</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading IP addresses...</string>
+				<key>script</key>
+				<string>localipv4=$(ifconfig | grep 'inet ' | grep -Fv 127.0.0.1 | awk '{print $2}')
+externalipv4=$(curl -4 -s https://ifconfig.co)
+
+localipv6=$(ifconfig | grep 'inet6 ' | grep 'en0' | awk '{print $2}' | sed 's/%en0//g')
+externalipv6=$(curl -6 -s https://ifconfig.co)
+
+subtitletext='Press enter to paste or ⌘C to copy'
+
+cat &lt;&lt; EOB
+{"items": [
+
+	{
+		"title": "Local IPv4: $localipv4",
+		"subtitle": "$subtitletext",
+		"arg": "$localipv4"
+	},
+
+	{
+		"title": "External IPv4: $externalipv4",
+		"subtitle": "$subtitletext",
+		"arg": "$externalipv4"
+	},
+
+	{
+		"title": "Local IPv6: $localipv6",
+		"subtitle": "$subtitletext",
+		"arg": "$localipv6"
+	},
+
+	{
+		"title": "External IPv6: $externalipv6",
+		"subtitle": "$subtitletext",
+		"arg": "$externalipv6"
+	}
+
+]}
+EOB</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Loading IP addresses...</string>
+				<key>title</key>
+				<string>IP Address</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>57437172-903E-4E52-B95B-71F69C28819F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>An Alfred 3 workflow for getting your local and external IP addresses.</string>
+	<key>uidata</key>
+	<dict>
+		<key>57437172-903E-4E52-B95B-71F69C28819F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>E8AE1551-D33E-467A-AB97-9F557BEB3420</key>
+		<dict>
+			<key>xpos</key>
+			<integer>440</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/alexchantastic/alfred-ip-address-workflow/</string>
+</dict>
+</plist>
