@@ -1,10 +1,30 @@
-localipv4=$(ifconfig | grep 'inet.*broadcast' | grep -Fv 127.0.0.1 | awk '{{printf"%s ",$2}}')
+localipv4=$(ifconfig en0 | grep 'inet.*broadcast' | grep -Fv 127.0.0.1 | awk '{{printf"%s ",$2}}')
 externalipv4=$(curl -4 -s https://ifconfig.co)
 
-localipv6=$(ifconfig | grep 'inet6 ' | grep 'en0' | awk '{print $2}' | sed 's/%en0//g')
+localipv6=$(ifconfig en0 | grep 'inet6' | awk '{print $2}')
 externalipv6=$(curl -6 -s https://ifconfig.co)
 
 subtitletext='Press enter to paste or ⌘C to copy'
+
+if [ -z $localipv4 ]
+	then
+	localipv4='n/a'
+fi
+
+if [ -z $externalipv4 ]
+	then
+	externalipv4='n/a'
+fi
+
+if [ -z $localipv6 ]
+	then
+	localipv6='n/a'
+fi
+
+if [ -z $externalipv6 ] || [ $externalipv6 == $externalipv4 ]
+	then
+	externalipv6='n/a'
+fi
 
 cat << EOB
 {"items": [

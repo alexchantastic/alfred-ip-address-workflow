@@ -75,13 +75,33 @@
 				<key>runningsubtext</key>
 				<string>Loading IP addresses...</string>
 				<key>script</key>
-				<string>localipv4=$(ifconfig | grep 'inet ' | grep -Fv 127.0.0.1 | awk '{print $2}')
+				<string>localipv4=$(ifconfig en0 | grep 'inet.*broadcast' | grep -Fv 127.0.0.1 | awk '{{printf"%s ",$2}}')
 externalipv4=$(curl -4 -s https://ifconfig.co)
 
-localipv6=$(ifconfig | grep 'inet6 ' | grep 'en0' | awk '{print $2}' | sed 's/%en0//g')
+localipv6=$(ifconfig en0 | grep 'inet6' | awk '{print $2}')
 externalipv6=$(curl -6 -s https://ifconfig.co)
 
 subtitletext='Press enter to paste or ⌘C to copy'
+
+if [ -z $localipv4 ]
+	then
+	localipv4='n/a'
+fi
+
+if [ -z $externalipv4 ]
+	then
+	externalipv4='n/a'
+fi
+
+if [ -z $localipv6 ]
+	then
+	localipv6='n/a'
+fi
+
+if [ -z $externalipv6 ] || [ $externalipv6 == $externalipv4 ]
+	then
+	externalipv6='n/a'
+fi
 
 cat &lt;&lt; EOB
 {"items": [
@@ -111,7 +131,8 @@ cat &lt;&lt; EOB
 	}
 
 ]}
-EOB</string>
+EOB
+</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -153,7 +174,7 @@ EOB</string>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.0.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/alexchantastic/alfred-ip-address-workflow/</string>
 </dict>
