@@ -1,4 +1,4 @@
-localipv4=$(ifconfig | grep 'inet ' | grep -Fv 127.0.0.1 | awk '{print $2}')
+localipv4=$(ifconfig | grep 'inet.*broadcast' | grep -Fv 127.0.0.1 | awk '{{printf"%s ",$2}}')
 externalipv4=$(curl -4 -s https://ifconfig.co)
 
 localipv6=$(ifconfig | grep 'inet6 ' | grep 'en0' | awk '{print $2}' | sed 's/%en0//g')
