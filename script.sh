@@ -1,7 +1,7 @@
-localipv4=$(ifconfig en0 | grep 'inet.*broadcast' | grep -Fv 127.0.0.1 | awk '{{printf"%s ",$2}}')
+localipv4=$(ifconfig | grep 'inet.*broadcast' | grep -Fv 127.0.0.1 -m 1 | awk '{{printf"%s ",$2}}')
 externalipv4=$(curl -4 -s -m 5 https://ifconfig.co)
 
-localipv6=$(ifconfig en0 | grep 'inet6' | awk '{print $2}')
+localipv6=$(ifconfig | grep 'inet6.*%en' -m 1 | awk '{print $2}')
 externalipv6=$(curl -6 -s -m 5 https://ifconfig.co)
 
 subtitletext='Press enter to paste or ⌘C to copy'
