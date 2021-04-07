@@ -2,7 +2,7 @@
 
 ![Screenshot](https://user-images.githubusercontent.com/604167/44317530-ab818d80-a3e6-11e8-8b86-afa0f2155f0b.png)
 
-An [Alfred 3](https://www.alfredapp.com/) workflow for getting your local and external IP addresses.
+An [Alfred 4](https://www.alfredapp.com/) workflow for getting your local and external IP addresses.
 
 ## Installation
 
