@@ -82,7 +82,7 @@
 				<string>localipv4=$(ifconfig | grep 'inet.*broadcast' -m 1 | awk '{print $2}')
 externalipv4=$(curl -4 -s -m 5 ifconfig.co)
 
-localipv6=$(ifconfig | grep 'inet6.*%en' -m 1 | awk '{print $2}')
+localipv6=$(ifconfig | grep 'inet6.*%en' -m 1 | awk '{print $2}' | sed 's/%en*//')
 externalipv6=$(curl -6 -s -m 5 ifconfig.co)
 
 subtitletext='Press enter to paste or ⌘C to copy'
@@ -180,7 +180,7 @@ EOB
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.1.0</string>
+	<string>1.1.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/alexchantastic/alfred-ip-address-workflow/</string>
 </dict>
