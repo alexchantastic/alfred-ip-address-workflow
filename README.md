@@ -1,6 +1,6 @@
 # alfred-ip-address-workflow
 
-![Screenshot](https://user-images.githubusercontent.com/604167/44317530-ab818d80-a3e6-11e8-8b86-afa0f2155f0b.png)
+![Screenshot](https://user-images.githubusercontent.com/604167/116506001-16aadf80-a871-11eb-92d5-0b1ac7c8054c.png)
 
 An [Alfred 4](https://www.alfredapp.com/) workflow for getting your local and external IP addresses.
 
