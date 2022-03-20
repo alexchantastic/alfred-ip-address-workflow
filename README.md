@@ -16,3 +16,7 @@ Note that the [Alfred Powerpack](https://www.alfredapp.com/powerpack/) is requir
 1. Use the keyword `ip` to trigger the workflow
 2. Select IP you would like to copy or paste (local IPv4, external IPv4, local IPv6, external IPv6)
 3. Press `enter` to copy to clipboard and paste into the forefront application or just `⌘ + c` to copy to clipboard
+
+## License
+
+Code released under the [MIT License](https://github.com/alexchantastic/alfred-ip-address-workflow/blob/master/LICENSE).
