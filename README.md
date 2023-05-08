@@ -35,7 +35,7 @@ To configure the service used:
 1. Use the keyword `ip` to trigger the workflow
 2. Select IP you would like to copy or paste (local getway、local ipv4、external ipv4、address from、local ipv6、external ipv6、nameserver)
 3. Press `enter` to copy to clipboard and paste into the forefront application or just `⌘ + c` to copy to clipboard
-4. Hold down the ⌘ and then press enter to open current url
+4. Hold down the `⌘` and then press enter to open current url
 
 ## License
 
