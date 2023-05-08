@@ -1,6 +1,6 @@
 # alfred-ip-address-workflow
 
-![Screenshot](https://user-images.githubusercontent.com/604167/116506001-16aadf80-a871-11eb-92d5-0b1ac7c8054c.png)
+![Screenshot](https://github.com/jide23work/alfred-ip-address-workflow/blob/master/show.png)
 
 An [Alfred 5](https://www.alfredapp.com/) workflow for getting your local and external IP addresses.
 
@@ -33,8 +33,9 @@ To configure the service used:
 ## Usage
 
 1. Use the keyword `ip` to trigger the workflow
-2. Select IP you would like to copy or paste (local IPv4, external IPv4, local IPv6, external IPv6)
+2. Select IP you would like to copy or paste (local getway、local ipv4、external ipv4、address from、local ipv6、external ipv6、nameserver)
 3. Press `enter` to copy to clipboard and paste into the forefront application or just `⌘ + c` to copy to clipboard
+4. Hold down the ⌘ and then press enter to open current url
 
 ## License
 

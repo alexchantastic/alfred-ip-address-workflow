@@ -3,13 +3,61 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.alexchantastic.ipaddress</string>
-	<key>category</key>
-	<string>Tools</string>
+	<string>com.jide23.NetInfo</string>
 	<key>connections</key>
 	<dict>
+		<key>13420471-6BBA-4312-8DE1-F5E736DA713C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C360EC1B-D585-4700-AC83-937B257E7C83</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3C4BD13C-A369-45AA-A4BE-ADD6AF5B5FF0</key>
+		<array/>
+		<key>3E448A67-CCE0-4C31-AA96-9C589BB139C7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C360EC1B-D585-4700-AC83-937B257E7C83</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>5D65F770-ECDD-449A-BDC7-6EC6DBD39138</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>13420471-6BBA-4312-8DE1-F5E736DA713C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>57437172-903E-4E52-B95B-71F69C28819F</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3E448A67-CCE0-4C31-AA96-9C589BB139C7</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Press enter to paste or ⌘C to copy</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>E8AE1551-D33E-467A-AB97-9F557BEB3420</string>
@@ -20,36 +68,137 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9D6CA467-B13B-405E-A030-5B43750BAA63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
+		<key>669B9325-B872-40E4-B2F9-CA0D23CC807C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3C4BD13C-A369-45AA-A4BE-ADD6AF5B5FF0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9D6CA467-B13B-405E-A030-5B43750BAA63</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3C4BD13C-A369-45AA-A4BE-ADD6AF5B5FF0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>5D65F770-ECDD-449A-BDC7-6EC6DBD39138</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>669B9325-B872-40E4-B2F9-CA0D23CC807C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E8AE1551-D33E-467A-AB97-9F557BEB3420</key>
+		<array/>
 	</dict>
 	<key>createdby</key>
-	<string>Alex Chan</string>
+	<string>jide23</string>
 	<key>description</key>
-	<string>Get your local and external IP addresses.</string>
+	<string>Displays information about your Network.</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>IP Address</string>
+	<string>NetInfo</string>
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
 				<false/>
-				<key>transient</key>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>C360EC1B-D585-4700-AC83-937B257E7C83</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>^(http|https):</string>
+						<key>outputlabel</key>
+						<string>has scheme</string>
+						<key>uid</key>
+						<string>5D65F770-ECDD-449A-BDC7-6EC6DBD39138</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
 				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>E8AE1551-D33E-467A-AB97-9F557BEB3420</string>
+			<string>3E448A67-CCE0-4C31-AA96-9C589BB139C7</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>http://{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>13420471-6BBA-4312-8DE1-F5E736DA713C</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -77,15 +226,24 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Loading IP addresses...</string>
+				<string>Loading Network Information...</string>
 				<key>script</key>
-				<string>localipv4=$(ifconfig | grep 'inet.*broadcast' -m 1 | awk '{print $2}')
-externalipv4=$(curl -4 -s -m 5 $service)
+				<string>localgetway=$(route -n get default | grep 'gateway' | awk '{print $2}')
+localipv4=$(ifconfig | grep 'inet.*broadcast' -m 1 | awk '{print $2}')
+externalipv4=$(curl icanhazip.com)
+address=$(curl  -4 -s -m 5 myip.ipip.net | awk '{print $3$4$5$6}' | sed 's/来自于：*//')
+localipv6=$(ifconfig | grep 'inet6.*%en' -m 1 | awk '{print $2}' | sed 's/%en0*//')
+externalipv6=$(curl -6 -s -m 5 icanhazip.com)
+nameserver=$(cat /etc/resolv.conf | grep 'nameserver' | awk '{print $2}' | tr '\n' ';' | rev | cut -c 2- | rev)
 
-localipv6=$(ifconfig | grep 'inet6.*%en' -m 1 | awk '{print $2}' | sed 's/%en*//')
-externalipv6=$(curl -6 -s -m 5 $service)
 
-subtitletext='Press enter to paste or ⌘C to copy'
+subtitletext='Hold down the ⌘ and then press enter to open current url'
+
+
+if [ -z $localgetway ]
+  then
+  localgetway='n/a'
+fi
 
 if [ -z $localipv4 ]
   then
@@ -95,6 +253,11 @@ fi
 if [ -z $externalipv4 ]
   then
   externalipv4='n/a'
+fi
+
+if [ -z $address ]
+  then
+  address='n/a'
 fi
 
 if [ -z $localipv6 ]
@@ -107,31 +270,49 @@ if [ -z $externalipv6 ] || [ $externalipv6 == $externalipv4 ]
   externalipv6='n/a'
 fi
 
+if [ -z $nameserver]
+  then
+  nameserver='n/a'
+fi
+
 cat &lt;&lt; EOB
 {"items": [
 
   {
-    "title": "Local IPv4: $localipv4",
+    "title": "Local_Getway: $localgetway",
+    "subtitle": "$subtitletext",
+    "arg": "$localgetway"
+  },
+
+  {
+    "title": "Local_IPv4: $localipv4",
     "subtitle": "$subtitletext",
     "arg": "$localipv4"
   },
 
   {
-    "title": "External IPv4: $externalipv4",
-    "subtitle": "$subtitletext",
+    "title": "External_IPv4: $externalipv4",
     "arg": "$externalipv4"
   },
 
+  {	
+    "title": "IPv4_From: $address",
+    "arg": "$IPv4Address"
+  },
+
   {
-    "title": "Local IPv6: $localipv6",
-    "subtitle": "$subtitletext",
+    "title": "Local_IPv6: $localipv6",
     "arg": "$localipv6"
   },
 
   {
-    "title": "External IPv6: $externalipv6",
-    "subtitle": "$subtitletext",
+    "title": "External_IPv6: $externalipv6",
     "arg": "$externalipv6"
+  },
+
+  {
+    "title": "DNS: $nameserver",
+    "arg": "$nameserver"
   }
 
 ]}
@@ -142,9 +323,9 @@ EOB
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Loading IP addresses...</string>
+				<string>Loading Network Information...</string>
 				<key>title</key>
-				<string>IP Address</string>
+				<string>Net info</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -157,53 +338,172 @@ EOB
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>E8AE1551-D33E-467A-AB97-9F557BEB3420</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>3C4BD13C-A369-45AA-A4BE-ADD6AF5B5FF0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>^(http|https):</string>
+						<key>outputlabel</key>
+						<string>has scheme</string>
+						<key>uid</key>
+						<string>5D65F770-ECDD-449A-BDC7-6EC6DBD39138</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>9D6CA467-B13B-405E-A030-5B43750BAA63</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>http://{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>669B9325-B872-40E4-B2F9-CA0D23CC807C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>An Alfred 5 workflow for getting your local and external IP addresses.</string>
+	<string>![](icon.png)
+# NetInfo
+
+- Set the Netinfo using the keyword (default: `ip`).
+- Displays information about your Network.
+  Contains local getway、local ipv4、external ipv4、address from、local ipv6、external ipv6、nameserver.
+
+
+
+### Thanks
+
+[▸ Visit on Github ◂](https://github.com/jide23work)</string>
 	<key>uidata</key>
 	<dict>
+		<key>13420471-6BBA-4312-8DE1-F5E736DA713C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>xpos</key>
+			<real>510</real>
+			<key>ypos</key>
+			<real>210</real>
+		</dict>
+		<key>3C4BD13C-A369-45AA-A4BE-ADD6AF5B5FF0</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<real>655</real>
+			<key>ypos</key>
+			<real>465</real>
+		</dict>
+		<key>3E448A67-CCE0-4C31-AA96-9C589BB139C7</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>4</integer>
+			<key>xpos</key>
+			<real>365</real>
+			<key>ypos</key>
+			<real>165</real>
+		</dict>
 		<key>57437172-903E-4E52-B95B-71F69C28819F</key>
 		<dict>
 			<key>xpos</key>
-			<real>240</real>
+			<real>145</real>
 			<key>ypos</key>
-			<real>200</real>
+			<real>255</real>
+		</dict>
+		<key>669B9325-B872-40E4-B2F9-CA0D23CC807C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>xpos</key>
+			<real>525</real>
+			<key>ypos</key>
+			<real>515</real>
+		</dict>
+		<key>9D6CA467-B13B-405E-A030-5B43750BAA63</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>4</integer>
+			<key>xpos</key>
+			<real>365</real>
+			<key>ypos</key>
+			<real>470</real>
+		</dict>
+		<key>C360EC1B-D585-4700-AC83-937B257E7C83</key>
+		<dict>
+			<key>xpos</key>
+			<real>630</real>
+			<key>ypos</key>
+			<real>130</real>
 		</dict>
 		<key>E8AE1551-D33E-467A-AB97-9F557BEB3420</key>
 		<dict>
 			<key>xpos</key>
-			<real>440</real>
+			<real>365</real>
 			<key>ypos</key>
-			<real>200</real>
+			<real>310</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string>https://icanhazip.com</string>
-				<key>placeholder</key>
-				<string></string>
-				<key>required</key>
-				<true/>
-				<key>trim</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>HTTP/HTTPS address of an external IP service</string>
-			<key>label</key>
-			<string>External IP Service</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>service</string>
-		</dict>
-	</array>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>1.2.0</string>
+	<string>0.0.1</string>
 	<key>webaddress</key>
-	<string>https://github.com/alexchantastic/alfred-ip-address-workflow/</string>
+	<string>https://github.com/jide23work/AlfredWorkflows/NetInfo/NetInfo.alfredworkflow</string>
 </dict>
 </plist>
